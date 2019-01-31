@@ -1,6 +1,24 @@
 button {
   background-color: green;
   color: white;
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 200;
+}
+
+.hello {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.inline-validation {
+  color: red;
+}
+
+.red-border {
+  border: 2px solid red;
+}
+
+button:disabled {
+  opacity: .5;
 }

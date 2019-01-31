@@ -1,16 +1,21 @@
 <template>
   <div class="hello">
-    <input type="text" name="firstName" v-model="nameInput">
-    <div v-bind:class="backgroundClassName"></div>
-    <!-- vue if -->
-    <div v-bind:class="backgroundClassName">You have exceeded 50 characters</div>
-    <!-- v-on -->
-    <button v-on:click="handleClick">Submit</button>
+    <!-- -->
+    <!-- input and line validation flexbox -->
+    <div class="input-wrapper">
+      <input type="text" v-model="inputValue" v-bind:class="inputValidationClass">
+      <!--
+        <div v-if="inputValue.length > 50">you exceeded 50 characters</div>
+      -->
+      <div v-if="inlineValidationClass" class="inline-validation">you exceeded 50 characters</div>
+    </div>
+    <div class="button-wrapper">
+      <button v-bind:disabled="isButtonDisabled">Submit</button>
+    </div>
+
     <!-- v-once -->
     <!-- v-html -->
     <!-- v-model -->
-    <label for="firstName"></label>
-    <input type="text" name="firstName" v-model="nameInput">
   </div>
 </template>
 
