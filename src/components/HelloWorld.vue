@@ -2,13 +2,15 @@
   <div class="hello">
     <input type="text" name="firstName" v-model="nameInput">
     <div v-bind:class="backgroundClassName"></div>
+    <!-- vue if -->
     <div v-bind:class="backgroundClassName">You have exceeded 50 characters</div>
     <!-- v-on -->
     <button v-on:click="handleClick">Submit</button>
     <!-- v-once -->
     <!-- v-html -->
-    <div v-html="anchorTag"></div>
     <!-- v-model -->
+    <label for="firstName"></label>
+    <input type="text" name="firstName" v-model="nameInput">
   </div>
 </template>
 
